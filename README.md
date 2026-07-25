@@ -14,7 +14,6 @@ ______________________________________________________________________
   - [How Often Is This List Updated?](#how-often-is-this-list-updated)
   - [Whitelist Exceptions You Might Want to Make](#whitelist-exceptions-you-might-want-to-make)
     - [Google Fonts](#google-fonts)
-    - [Eve Online](#eve-online)
   - [Last Words](#last-words)
 
 <!-- mdformat-toc end -->
