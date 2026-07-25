@@ -1,3 +1,5 @@
+> Only for experienced users.
+
 # AdGuardHome DNS Filter List<a name="adguardhome-dns-filter-list"></a>
 
 ______________________________________________________________________
@@ -23,14 +25,14 @@ ______________________________________________________________________
 
 This is a DNS blocklist that can be used for AdGuardHome. (Does not work with Pi-hole)
 
-This list combines more than 80 other lists, including the default lists from
+This list combines more than XX other lists, including most of the default lists from
 AdGuardHome, into one single list, so you don't have to add countless lists to your
 AdGuardHome, but just this one.
 
 ## How Can I Use It?<a name="how-can-i-use-it"></a>
 
 Pretty simple, copy this link
-(https://raw.githubusercontent.com/ppfeufer/adguard-filter-list/refs/heads/master/blocklist) and
+(https://raw.githubusercontent.com/luckmagnet/adguard-filter-list/master/blocklist) and
 add it to your AdGuardHome DNS blocklists.
 
 ## Which Lists Are Combined Here?<a name="which-lists-are-combined-here"></a>
@@ -148,15 +150,6 @@ the following to your whitelist:
 
 ```plainext
 @@||fonts.gstatic.com^$important
-```
-
-### Eve Online<a name="eve-online"></a>
-
-If you are playing Eve Online by any chance, you also might want to add the
-following line to your custom filter rules:
-
-```plaintext
-@@||extccp.com^$important
 ```
 
 ## Last Words<a name="last-words"></a>
