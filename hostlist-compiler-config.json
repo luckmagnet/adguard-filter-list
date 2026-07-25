@@ -114,8 +114,8 @@
       ]
     },
     {
-      "name": "XX",
-      "source": "https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/polish-pihole-filters/hostfile.txt",
+      "name": "Dandelion Sprout's AdGuard Home Compilation List - Web Push Notifications",
+      "source": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationList-Notifications.txt",
       "type": "hosts",
       "transformations": [
         "RemoveComments",
@@ -124,8 +124,8 @@
       ]
     },
     {
-      "name": "SWE: Frellwit's Swedish Hosts File",
-      "source": "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Hosts-File.txt",
+      "name": "Perflyst and Dandelion Sprout's Smart-TV Blocklist",
+      "source": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV-AGH.txt",
       "type": "hosts",
       "transformations": [
         "RemoveComments",
@@ -134,8 +134,8 @@
       ]
     },
     {
-      "name": "CHN: anti-AD",
-      "source": "https://anti-ad.net/easylist.txt",
+      "name": "Dandelion Sprout's Game Console Adblock List",
+      "source": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/GameConsoleAdblockList.txt",
       "type": "adblock",
       "transformations": [
         "RemoveComments",
@@ -144,7 +144,7 @@
       ]
     },
     {
-      "name": "NLD: Easylist",
+      "name": "",
       "source": "https://easylist-downloads.adblockplus.org/easylistdutch.txt",
       "type": "adblock",
       "transformations": [
