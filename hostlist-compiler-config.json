@@ -144,8 +144,8 @@
       ]
     },
     {
-      "name": "",
-      "source": "https://easylist-downloads.adblockplus.org/easylistdutch.txt",
+      "name": "FMHY Unsafe sites filterlist - Plus",
+      "source": "https://raw.githubusercontent.com/fmhy/FMHYFilterlist/main/filterlist.txt",
       "type": "adblock",
       "transformations": [
         "RemoveComments",
