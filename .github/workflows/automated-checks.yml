@@ -8,7 +8,7 @@ on:
     branches:
       - '**'
   schedule:
-    - cron: '0 5 * * *'
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
@@ -32,14 +32,27 @@ jobs:
           python-version: '3.12'
           check-latest: true
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Hostlist Compiler
+        run: npm install -g @adguard/hostlist-compiler
+
+      - name: Run compile-hostlist script
+        run: |
+          chmod +x ./compile-hostlist
+          ./compile-hostlist
+
       - name: Run Pre Commit Checks
         uses: pre-commit/action@v3.0.1
         with:
           extra_args: --all-files
         continue-on-error: true
 
-      - name: Auto-commit formatting fixes
+      - name: Auto-commit blocklist and formatting changes
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
-          commit_message: "style: auto-fix markdown formatting via pre-commit"
-          file_pattern: "*.md"
+          commit_message: "Blocklist update $(date '+%Y-%m-%d') $(date '+%H:%M:%S')"
+          file_pattern: "blocklist *.md"
