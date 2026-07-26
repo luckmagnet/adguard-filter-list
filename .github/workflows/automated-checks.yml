@@ -14,11 +14,14 @@ jobs:
     runs-on: ubuntu-latest
     
     permissions:
-      contents: write # Required to push fixes back to the repository
+      contents: write
 
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+          persist-credentials: true
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -30,7 +33,7 @@ jobs:
         uses: pre-commit/action@v3.0.1
         with:
           extra_args: --all-files
-        continue-on-error: true # Allows the pipeline to continue so auto-commit can save the fixes
+        continue-on-error: true
 
       - name: Auto-commit formatting fixes
         uses: stefanzweifel/git-auto-commit-action@v7
