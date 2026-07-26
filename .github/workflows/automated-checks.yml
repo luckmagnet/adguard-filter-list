@@ -9,10 +9,12 @@ on:
       - '**'
 
 jobs:
-  # pre-commit Checks
   pre-commit:
     name: pre-commit Checks
     runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write # Required to push fixes back to the repository
 
     steps:
       - name: Checkout
@@ -28,3 +30,10 @@ jobs:
         uses: pre-commit/action@v3.0.1
         with:
           extra_args: --all-files
+        continue-on-error: true # Allows the pipeline to continue so auto-commit can save the fixes
+
+      - name: Auto-commit formatting fixes
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: "style: auto-fix markdown formatting via pre-commit"
+          file_pattern: "*.md"
