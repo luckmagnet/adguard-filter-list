@@ -4,15 +4,8 @@ on:
   push:
     branches:
       - '**'
-
-    tags-ignore:
-      - '**'
-
   pull_request:
     branches:
-      - '**'
-
-    tags-ignore:
       - '**'
 
 jobs:
@@ -33,3 +26,5 @@ jobs:
 
       - name: Run Pre Commit Checks
         uses: pre-commit/action@v3.0.1
+        with:
+          extra_args: --all-files
