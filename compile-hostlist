@@ -1,25 +1,16 @@
 #!/usr/bin/env bash
 
-# Get OISD list, since the HostlistCompiler can't fetch it for whatever reason » https://github.com/AdguardTeam/HostlistCompiler/issues/58
+# Get OISD list
 curl https://big.oisd.nl/ -o ../oisd.txt
 
 # Create compiled blocklist
 time hostlist-compiler -v -c hostlist-compiler-config.json -o blocklist
 
-# Remove all whitelisted entries, this is a blocklist after all
+# Remove all whitelisted entries
 sed -i '/^@@/d' blocklist
 
 # Remove empty lines
 sed -i '/^$/d' blocklist
 
-# Remove rules that are too long as these are most likely non DNS related rules, see https://github.com/AdguardTeam/AdGuardHome/issues/6003
+# (Optional) Remove rules that are too long
 #sed -i '/^.\{1024\}./d' blocklist
-
-# Date and time
-currentDate=`/bin/date '+%Y-%m-%d'`
-currentTime=`/bin/date '+%H:%M:%S'`
-
-# Push it to GitHub
-git add *
-git commit -m "Blocklist update ${currentDate} ${currentTime}"
-git push
