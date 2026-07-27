@@ -162,8 +162,8 @@
         "Compress",
         "Validate"
       ]
-    },
-  ]
+    }
+  ],
   "transformations": [
     "RemoveComments",
     "Deduplicate",
