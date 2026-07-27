@@ -55,4 +55,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "Blocklist update $(date '+%Y-%m-%d') $(date '+%H:%M:%S')"
-          file_pattern: "blocklist *.md"
+          file_pattern: "blocklist"
