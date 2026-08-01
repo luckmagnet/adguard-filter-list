@@ -1,6 +1,6 @@
 > Only for experienced users.
 
-# AdGuardHome DNS Filter List<a name="adguardhome-dns-filter-list"></a> <a href="#"><img src="https://img.shields.io/github/last-commit/luckmagnet/adguard-filter-list?label=Updated&cache=0&color=green&icon=github" alt="Last commit activity"></a>
+# AdGuardHome DNS Filter List<a name="adguardhome-dns-filter-list"></a> <a href="#"><img src="https://badgen.net/github/last-commit/luckmagnet/adguard-filter-list?label=Updated&cache=0&color=green&icon=github" alt="Last commit activity"></a>
 
 ______________________________________________________________________
 
