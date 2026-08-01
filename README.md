@@ -22,7 +22,7 @@ ______________________________________________________________________
 
 ## What Is This?<a name="what-is-this"></a>
 
-This is a DNS blocklist that can be used for AdGuardHome. (Does not work with Pi-hole)
+This is a DNS blocklist that can be used for AdGuardHome. 
 
 This list combines more than XX other lists, including most of the default lists from
 AdGuardHome, into one single list, so you don't have to add countless lists to your
